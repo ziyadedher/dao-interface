@@ -1,0 +1,6 @@
+{
+  "extends": ["@ziyadedher"],
+  "rules": {
+    "@typescript-eslint/prefer-readonly-parameter-types": ["off"]
+  }
+}
