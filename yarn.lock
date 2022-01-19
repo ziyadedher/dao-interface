@@ -1651,6 +1651,73 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dao-interface/webapp@workspace:packages/dao-interface-webapp":
+  version: 0.0.0-use.local
+  resolution: "@dao-interface/webapp@workspace:packages/dao-interface-webapp"
+  dependencies:
+    "@babel/core": 7.16.7
+    "@headlessui/react": 1.4.3
+    "@jest/types": 27.4.2
+    "@mdx-js/react": 1.6.22
+    "@next/env": 12.0.8
+    "@next/eslint-plugin-next": 12.0.8
+    "@storybook/addon-actions": 6.4.13
+    "@storybook/addon-docs": 6.4.13
+    "@storybook/addon-essentials": 6.4.13
+    "@storybook/addon-links": 6.4.13
+    "@storybook/addon-postcss": 2.0.0
+    "@storybook/react": 6.4.13
+    "@testing-library/jest-dom": 5.16.1
+    "@testing-library/react": 12.1.2
+    "@testing-library/react-hooks": 7.0.2
+    "@types/babel__core": 7.1.18
+    "@types/eslint": 8.2.2
+    "@types/jest": 27.4.0
+    "@types/mdx-js__react": 1.5.5
+    "@types/node": 16.11.21
+    "@types/prettier": 2.4.3
+    "@types/react": 17.0.38
+    "@types/source-map-support": 0.5.4
+    "@types/testing-library__jest-dom": 5.14.2
+    "@typescript-eslint/eslint-plugin": 5.10.0
+    "@typescript-eslint/parser": 5.10.0
+    "@usedapp/core": ^0.9.0
+    "@yarnpkg/sdks": 2.6.0-rc.3
+    "@ziyadedher/eslint-config": 3.0.0
+    autoprefixer: 10.4.2
+    babel-loader: 8.2.3
+    chromatic: 6.4.0
+    codecov: 3.8.3
+    eslint: 8.7.0
+    eslint-import-resolver-node: 0.3.6
+    eslint-import-resolver-typescript: 2.5.0
+    eslint-plugin-eslint-comments: 3.2.0
+    eslint-plugin-import: 2.25.4
+    eslint-plugin-jest: 25.7.0
+    eslint-plugin-jsx-a11y: 6.5.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-react: 7.28.0
+    eslint-plugin-react-hooks: 4.3.0
+    eslint-plugin-tailwindcss: 3.3.0
+    ethers: ^5.5.3
+    jest: 27.4.7
+    next: 12.0.4
+    node-notifier: 10.0.0
+    postcss: 8.4.5
+    prettier: 2.5.1
+    react: 17.0.2
+    react-dom: 17.0.2
+    source-map-support: 0.5.21
+    tailwindcss: 3.0.15
+    ts-jest: 27.1.3
+    ts-node: 10.4.0
+    typescript: 4.5.4
+  dependenciesMeta:
+    open@7.4.2:
+      unplugged: true
+  languageName: unknown
+  linkType: soft
+
 "@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.6
   resolution: "@discoveryjs/json-ext@npm:0.5.6"
@@ -1994,7 +2061,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/keccak256@npm:5.5.0, @ethersproject/keccak256@npm:^5.5.0":
+"@ethersproject/keccak256@npm:5.5.0, @ethersproject/keccak256@npm:^5.0.0-beta.130, @ethersproject/keccak256@npm:^5.5.0":
   version: 5.5.0
   resolution: "@ethersproject/keccak256@npm:5.5.0"
   dependencies:
@@ -2008,6 +2075,15 @@ __metadata:
   version: 5.5.0
   resolution: "@ethersproject/logger@npm:5.5.0"
   checksum: 61d813ef8b9049e406f0b0b095f40a3809f8097dab4aaac980d91866a0e2718582d8e9d68b4280c7935546d3116cbc93a635d8f82e2a7963d6e2a1d43f29eb9a
+  languageName: node
+  linkType: hard
+
+"@ethersproject/networks@npm:5.5.0":
+  version: 5.5.0
+  resolution: "@ethersproject/networks@npm:5.5.0"
+  dependencies:
+    "@ethersproject/logger": ^5.5.0
+  checksum: cadf2280d29696dcf3e29fe62cdad350ccfc087e81b8dd2fb2b823e1a6c0e5f9e9fd0ccb52a290ea8af810b9c2f16f74f11b00fc34fc9d910bdeed0869089acf
   languageName: node
   linkType: hard
 
@@ -2039,6 +2115,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ethersproject/providers@npm:5.5.0":
+  version: 5.5.0
+  resolution: "@ethersproject/providers@npm:5.5.0"
+  dependencies:
+    "@ethersproject/abstract-provider": ^5.5.0
+    "@ethersproject/abstract-signer": ^5.5.0
+    "@ethersproject/address": ^5.5.0
+    "@ethersproject/basex": ^5.5.0
+    "@ethersproject/bignumber": ^5.5.0
+    "@ethersproject/bytes": ^5.5.0
+    "@ethersproject/constants": ^5.5.0
+    "@ethersproject/hash": ^5.5.0
+    "@ethersproject/logger": ^5.5.0
+    "@ethersproject/networks": ^5.5.0
+    "@ethersproject/properties": ^5.5.0
+    "@ethersproject/random": ^5.5.0
+    "@ethersproject/rlp": ^5.5.0
+    "@ethersproject/sha2": ^5.5.0
+    "@ethersproject/strings": ^5.5.0
+    "@ethersproject/transactions": ^5.5.0
+    "@ethersproject/web": ^5.5.0
+    bech32: 1.1.4
+    ws: 7.4.6
+  checksum: 8f29dfd9ef48613ffd4820ee1e77991492291172f8b87af9952380ef49231ef61b86df6df903c1bb2a7cfedc998fc337ca61c219e8aa74eeee18f6ff8cc7ad8b
+  languageName: node
+  linkType: hard
+
 "@ethersproject/providers@npm:5.5.2":
   version: 5.5.2
   resolution: "@ethersproject/providers@npm:5.5.2"
@@ -2063,6 +2166,16 @@ __metadata:
     bech32: 1.1.4
     ws: 7.4.6
   checksum: f03b78017ffa39880508cfb4f811ef3b5983d222303af06b4ab47b6296a3fa67dcd058534e5e167302e4e3af41c4aa44f8c113a974b84fbaa65c62959c098558
+  languageName: node
+  linkType: hard
+
+"@ethersproject/random@npm:5.5.0":
+  version: 5.5.0
+  resolution: "@ethersproject/random@npm:5.5.0"
+  dependencies:
+    "@ethersproject/bytes": ^5.5.0
+    "@ethersproject/logger": ^5.5.0
+  checksum: 7acbe2a5d318fc4553d16e4f204d8cb430f453db2fa138d1e0c3397d9b01a537e512357764f81e984d0818fdbe10899bf35edb8bb204e999d9ff9fe1087e04fc
   languageName: node
   linkType: hard
 
@@ -2184,6 +2297,19 @@ __metadata:
     "@ethersproject/transactions": ^5.5.0
     "@ethersproject/wordlists": ^5.5.0
   checksum: f7d38eb1cbd2eccaebf21a6104105bac133a80c37c9658d79a41f83d2b9166b09369ce0f5f2a5a1f9e317dfcb0d9d608e358bf53b85f34a7a3c8cf55b307f455
+  languageName: node
+  linkType: hard
+
+"@ethersproject/web@npm:5.5.0":
+  version: 5.5.0
+  resolution: "@ethersproject/web@npm:5.5.0"
+  dependencies:
+    "@ethersproject/base64": ^5.5.0
+    "@ethersproject/bytes": ^5.5.0
+    "@ethersproject/logger": ^5.5.0
+    "@ethersproject/properties": ^5.5.0
+    "@ethersproject/strings": ^5.5.0
+  checksum: 1e02916bc0a33aa567e9ecd01e6596d8dbc8b800a21f98e6fde4d32672a71076be464beb5a37b92d9747e5dfaabfca42f4d346cd12adbf246b8edd17d083c6d8
   languageName: node
   linkType: hard
 
@@ -4386,9 +4512,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 17.0.9
-  resolution: "@types/node@npm:17.0.9"
-  checksum: 64a1fa91979e3c37c5f42c6e7836b02aad333f2ed41114b8d975b4754e4f4a7fe3343e77ee4daceed6b5706c6662ade13ec1e955326cd1b1e8bf35800de5faf8
+  version: 17.0.10
+  resolution: "@types/node@npm:17.0.10"
+  checksum: 979e83d642a2b4f18fa1a4233f884822c05abc7acd0836024aa964187f8446432b21f7913e72fe2b3927c4a811c27a0b6cd60ac7c4ac6a6762cfbab70782aa6a
   languageName: node
   linkType: hard
 
@@ -4407,9 +4533,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^14.0.10":
-  version: 14.18.7
-  resolution: "@types/node@npm:14.18.7"
-  checksum: f1fced3ebf38b22ac6f54b7b01e6a6784fb1d3c2bdf40caf8fc352b8db5331c45e8642de3583ff87c0bfaa85b670b126aab2b215f307e708e87d3353037e0fb3
+  version: 14.18.9
+  resolution: "@types/node@npm:14.18.9"
+  checksum: a85dae901b5c3b318747e66f2228c0f0778bcd73430a01d7c42814c04ba1070f2817b865d0c5f0c1813b89afeebb34d19cf2662252bae9dc0c18d3ad23fc98c3
   languageName: node
   linkType: hard
 
@@ -4511,6 +4637,16 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 4079f4f959cd4a4bfaeda8b89fe8a1b1f8bdc9d87acfdc5f74a0b39cec9ec6a470724357c62778c0f063180b360c250e920c5a142f1dbcda67d9cc25a6d43a85
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:17.0.1":
+  version: 17.0.1
+  resolution: "@types/react@npm:17.0.1"
+  dependencies:
+    "@types/prop-types": "*"
+    csstype: ^3.0.2
+  checksum: 592d7a33898550f2139e69c1bb21397ab6f351f406623397cd7f9a4aea20140c779dd23f2934789d40b0bd87995a86c766434ba07bdd1de9533045d0f3596b68
   languageName: node
   linkType: hard
 
@@ -4898,6 +5034,84 @@ __metadata:
     "@typescript-eslint/types": 5.9.0
     eslint-visitor-keys: ^3.0.0
   checksum: 34a595b83b0e7d4f387d6c81b272804b94a1a91478c5f856fdfdd227595bf8562bf3f5d732606d10b4522c3f2617d09d4bacd2193f757a324ea66b3144a68903
+  languageName: node
+  linkType: hard
+
+"@uniswap/token-lists@npm:^1.0.0-beta.27":
+  version: 1.0.0-beta.27
+  resolution: "@uniswap/token-lists@npm:1.0.0-beta.27"
+  checksum: ab3d93dcd70b99a01402919a4b60ed3234a5dade398cd5ffff36be993cd28a682326b31d612a15ab5855610ca02ba51a7c32fddc7b06e8fee8b682adf63a34d5
+  languageName: node
+  linkType: hard
+
+"@usedapp/core@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "@usedapp/core@npm:0.9.0"
+  dependencies:
+    "@types/react": 17.0.1
+    "@uniswap/token-lists": ^1.0.0-beta.27
+    "@web3-react/core": 6.1.1
+    "@web3-react/injected-connector": 6.0.7
+    "@web3-react/network-connector": 6.1.5
+    ethers: 5.5.1
+    lodash.merge: ^4.6.2
+    nanoid: 3.1.22
+  peerDependencies:
+    react: "*"
+  checksum: 50615bfdc006eb4e08405affe457b52866ad774eff97263aa9fa2a3af8a044a4acb602df67fd02b350c07930521f9e50cadf076624b11972bac61fa3b5e84602
+  languageName: node
+  linkType: hard
+
+"@web3-react/abstract-connector@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "@web3-react/abstract-connector@npm:6.0.7"
+  dependencies:
+    "@web3-react/types": ^6.0.7
+  checksum: fa8b0ea3586e248da84756979dd5c5f6ddc2d1657a1698de63a6d0e38035c4b122841bd0e6b00f1a6f1825614b22f6552a584cafec3470ca6fbc2e127ab30b2a
+  languageName: node
+  linkType: hard
+
+"@web3-react/core@npm:6.1.1":
+  version: 6.1.1
+  resolution: "@web3-react/core@npm:6.1.1"
+  dependencies:
+    "@ethersproject/keccak256": ^5.0.0-beta.130
+    "@web3-react/abstract-connector": ^6.0.7
+    "@web3-react/types": ^6.0.7
+    tiny-invariant: ^1.0.6
+    tiny-warning: ^1.0.3
+  peerDependencies:
+    react: ">=16.8"
+  checksum: 8e86bea1f073d5ea9ca199141d97d44dec57f3f8f087dc40f846a61b74345c9e4c2349554992007926bb21570311348411223b903f3b5773467c3daa77fb29cd
+  languageName: node
+  linkType: hard
+
+"@web3-react/injected-connector@npm:6.0.7":
+  version: 6.0.7
+  resolution: "@web3-react/injected-connector@npm:6.0.7"
+  dependencies:
+    "@web3-react/abstract-connector": ^6.0.7
+    "@web3-react/types": ^6.0.7
+    tiny-warning: ^1.0.3
+  checksum: 867a634a12326f33d10eead26f557fe505942ec42f5586d0756eb864fa345187b255a7d9b78bd555eb2395f962e9615731bcfefe6cf07ef9971a7fca151377f8
+  languageName: node
+  linkType: hard
+
+"@web3-react/network-connector@npm:6.1.5":
+  version: 6.1.5
+  resolution: "@web3-react/network-connector@npm:6.1.5"
+  dependencies:
+    "@web3-react/abstract-connector": ^6.0.7
+    "@web3-react/types": ^6.0.7
+    tiny-invariant: ^1.0.6
+  checksum: 5858ffec9e2b446f0e3beffd76582f33ca13242bb8a7b359e0752935e8f1e51eefc3fcf8e62668e0021c82756735c1c9afd8ae269f0042c701f42d91152099f0
+  languageName: node
+  linkType: hard
+
+"@web3-react/types@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "@web3-react/types@npm:6.0.7"
+  checksum: 29ae264ae4a126e520a64a4b466ea712ee09b934f3fe13b957e09269249ffc882712cf11fff12c1c19dd66e38503075b4adf5e9d5f588ea0dd31bbedf6fa9a42
   languageName: node
   linkType: hard
 
@@ -6891,8 +7105,8 @@ __metadata:
   linkType: hard
 
 "chokidar@npm:^3.4.1, chokidar@npm:^3.4.2, chokidar@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "chokidar@npm:3.5.2"
+  version: 3.5.3
+  resolution: "chokidar@npm:3.5.3"
   dependencies:
     anymatch: ~3.1.2
     braces: ~3.0.2
@@ -6905,7 +7119,7 @@ __metadata:
   dependenciesMeta:
     fsevents:
       optional: true
-  checksum: d1fda32fcd67d9f6170a8468ad2630a3c6194949c9db3f6a91b16478c328b2800f433fb5d2592511b6cb145a47c013ea1cce60b432b1a001ae3ee978a8bffc2d
+  checksum: b49fcde40176ba007ff361b198a2d35df60d9bb2a5aab228279eb810feae9294a6b4649ab15981304447afe1e6ffbf4788ad5db77235dc770ab777c6e771980c
   languageName: node
   linkType: hard
 
@@ -7715,6 +7929,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dao-interface@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dao-interface@workspace:."
+  dependencies:
+    "@next/eslint-plugin-next": 12.0.8
+    "@types/eslint": 8.2.2
+    "@types/jest": 27.4.0
+    "@typescript-eslint/eslint-plugin": 5.10.0
+    "@typescript-eslint/parser": 5.10.0
+    "@yarnpkg/sdks": 2.6.0-rc.3
+    "@ziyadedher/eslint-config": 3.0.0
+    chromatic: 6.4.0
+    codecov: 3.8.3
+    eslint: 8.7.0
+    eslint-import-resolver-node: 0.3.6
+    eslint-import-resolver-typescript: 2.5.0
+    eslint-plugin-eslint-comments: 3.2.0
+    eslint-plugin-import: 2.25.4
+    eslint-plugin-jest: 25.7.0
+    eslint-plugin-jsx-a11y: 6.5.1
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-react: 7.28.0
+    eslint-plugin-react-hooks: 4.3.0
+    eslint-plugin-tailwindcss: 3.3.0
+    jest: 27.4.7
+    node-notifier: 10.0.0
+    prettier: 2.5.1
+    ts-jest: 27.1.3
+    typescript: 4.5.4
+  languageName: unknown
+  linkType: soft
+
 "data-uri-to-buffer@npm:3.0.1":
   version: 3.0.1
   resolution: "data-uri-to-buffer@npm:3.0.1"
@@ -8162,17 +8408,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.723":
+"electron-to-chromium@npm:^1.3.723, electron-to-chromium@npm:^1.4.17":
   version: 1.4.48
   resolution: "electron-to-chromium@npm:1.4.48"
   checksum: 928bfd2a452ff6344e97936224d307889735a18d553db1de68762d961a6d3445ac6749740de0a26173f1d9893d1ca2af8ee30c14113bebb077dbf26f7ffb3571
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.4.17":
-  version: 1.4.47
-  resolution: "electron-to-chromium@npm:1.4.47"
-  checksum: 7535d8deb3b7bd7b32d183e03f0c86e0cb05c7891b08901ebda27397219cec7c927590a514185aaaa36b2a3e7b048e5cb58e1bfddd7030a2452c213ef4f26dcf
   languageName: node
   linkType: hard
 
@@ -8961,6 +9200,44 @@ __metadata:
   version: 1.8.1
   resolution: "etag@npm:1.8.1"
   checksum: 571aeb3dbe0f2bbd4e4fadbdb44f325fc75335cd5f6f6b6a091e6a06a9f25ed5392f0863c5442acb0646787446e816f13cbfc6edce5b07658541dff573cab1ff
+  languageName: node
+  linkType: hard
+
+"ethers@npm:5.5.1":
+  version: 5.5.1
+  resolution: "ethers@npm:5.5.1"
+  dependencies:
+    "@ethersproject/abi": 5.5.0
+    "@ethersproject/abstract-provider": 5.5.1
+    "@ethersproject/abstract-signer": 5.5.0
+    "@ethersproject/address": 5.5.0
+    "@ethersproject/base64": 5.5.0
+    "@ethersproject/basex": 5.5.0
+    "@ethersproject/bignumber": 5.5.0
+    "@ethersproject/bytes": 5.5.0
+    "@ethersproject/constants": 5.5.0
+    "@ethersproject/contracts": 5.5.0
+    "@ethersproject/hash": 5.5.0
+    "@ethersproject/hdnode": 5.5.0
+    "@ethersproject/json-wallets": 5.5.0
+    "@ethersproject/keccak256": 5.5.0
+    "@ethersproject/logger": 5.5.0
+    "@ethersproject/networks": 5.5.0
+    "@ethersproject/pbkdf2": 5.5.0
+    "@ethersproject/properties": 5.5.0
+    "@ethersproject/providers": 5.5.0
+    "@ethersproject/random": 5.5.0
+    "@ethersproject/rlp": 5.5.0
+    "@ethersproject/sha2": 5.5.0
+    "@ethersproject/signing-key": 5.5.0
+    "@ethersproject/solidity": 5.5.0
+    "@ethersproject/strings": 5.5.0
+    "@ethersproject/transactions": 5.5.0
+    "@ethersproject/units": 5.5.0
+    "@ethersproject/wallet": 5.5.0
+    "@ethersproject/web": 5.5.0
+    "@ethersproject/wordlists": 5.5.0
+  checksum: ee004e3e2f526c3dbaa432c08cd46c9483c7556797c40219ea5eacf0b5968351de05b83aa4b00743612a0df2f8dcd6028866ddd250e5226166824c6f035a0121
   languageName: node
   linkType: hard
 
@@ -12987,6 +13264,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:3.1.22":
+  version: 3.1.22
+  resolution: "nanoid@npm:3.1.22"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 42378ebee489ab521aff0722b54ed7d1bcadb023398925f84ce5e160d0b61693f251e94714a3f4c16c7298b06b0f6871c52fdebc967fc48c0bdcffb096f0ee17
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.1.23, nanoid@npm:^3.1.30":
   version: 3.2.0
   resolution: "nanoid@npm:3.2.0"
@@ -15920,9 +16206,9 @@ __metadata:
   linkType: hard
 
 "source-map-js@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "source-map-js@npm:1.0.1"
-  checksum: 22606113d62bbd468712b0cb0c46e9a8629de7eb081049c62a04d977a211abafd7d61455617f8b78daba0b6c0c7e7c88f8c6b5aaeacffac0a6676ecf5caac5ce
+  version: 1.0.2
+  resolution: "source-map-js@npm:1.0.2"
+  checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
   languageName: node
   linkType: hard
 
@@ -16753,6 +17039,20 @@ __metadata:
   dependencies:
     setimmediate: ^1.0.4
   checksum: ec37ae299066bef6c464dcac29c7adafba1999e7227a9bdc4e105a459bee0f0b27234a46bfd7ab4041da79619e06a58433472867a913d01c26f8a203f87cee70
+  languageName: node
+  linkType: hard
+
+"tiny-invariant@npm:^1.0.6":
+  version: 1.2.0
+  resolution: "tiny-invariant@npm:1.2.0"
+  checksum: e09a718a7c4a499ba592cdac61f015d87427a0867ca07f50c11fd9b623f90cdba18937b515d4a5e4f43dac92370498d7bdaee0d0e7a377a61095e02c4a92eade
+  languageName: node
+  linkType: hard
+
+"tiny-warning@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-warning@npm:1.0.3"
+  checksum: da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
   languageName: node
   linkType: hard
 
@@ -17748,69 +18048,6 @@ __metadata:
   checksum: 5149842ccbfbc56fe4f8758957b3f8c8616a281874a5bb84aa1b305e4436a9bad853d21c629a7b8f174902449e1489c7a6c724fccf60965077c5636bd8aed42b
   languageName: node
   linkType: hard
-
-"webdev-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "webdev-template@workspace:."
-  dependencies:
-    "@babel/core": 7.16.7
-    "@headlessui/react": 1.4.3
-    "@jest/types": 27.4.2
-    "@mdx-js/react": 1.6.22
-    "@next/env": 12.0.8
-    "@next/eslint-plugin-next": 12.0.8
-    "@storybook/addon-actions": 6.4.13
-    "@storybook/addon-docs": 6.4.13
-    "@storybook/addon-essentials": 6.4.13
-    "@storybook/addon-links": 6.4.13
-    "@storybook/addon-postcss": 2.0.0
-    "@storybook/react": 6.4.13
-    "@testing-library/jest-dom": 5.16.1
-    "@testing-library/react": 12.1.2
-    "@testing-library/react-hooks": 7.0.2
-    "@types/babel__core": 7.1.18
-    "@types/eslint": 8.2.2
-    "@types/jest": 27.4.0
-    "@types/mdx-js__react": 1.5.5
-    "@types/node": 16.11.21
-    "@types/prettier": 2.4.3
-    "@types/react": 17.0.38
-    "@types/source-map-support": 0.5.4
-    "@types/testing-library__jest-dom": 5.14.2
-    "@typescript-eslint/eslint-plugin": 5.10.0
-    "@typescript-eslint/parser": 5.10.0
-    "@yarnpkg/sdks": 2.6.0-rc.3
-    "@ziyadedher/eslint-config": 3.0.0
-    autoprefixer: 10.4.2
-    babel-loader: 8.2.3
-    chromatic: 6.4.0
-    codecov: 3.8.3
-    eslint: 8.7.0
-    eslint-import-resolver-node: 0.3.6
-    eslint-import-resolver-typescript: 2.5.0
-    eslint-plugin-eslint-comments: 3.2.0
-    eslint-plugin-import: 2.25.4
-    eslint-plugin-jest: 25.7.0
-    eslint-plugin-jsx-a11y: 6.5.1
-    eslint-plugin-node: 11.1.0
-    eslint-plugin-react: 7.28.0
-    eslint-plugin-react-hooks: 4.3.0
-    eslint-plugin-tailwindcss: 3.3.0
-    ethers: ^5.5.3
-    jest: 27.4.7
-    next: 12.0.4
-    node-notifier: 10.0.0
-    postcss: 8.4.5
-    prettier: 2.5.1
-    react: 17.0.2
-    react-dom: 17.0.2
-    source-map-support: 0.5.21
-    tailwindcss: 3.0.15
-    ts-jest: 27.1.3
-    ts-node: 10.4.0
-    typescript: 4.5.4
-  languageName: unknown
-  linkType: soft
 
 "webidl-conversions@npm:^3.0.0":
   version: 3.0.1
