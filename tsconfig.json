@@ -1,7 +1,4 @@
 {
   "extends": "./.config/tsconfig.json",
-  "references": [
-      { "path": "packages/dao-interface-contracts" },
-      { "path": "packages/dao-interface-webapp" },
-  ]
+  "references": [{ "path": "packages/dao-interface-webapp" }]
 }
