@@ -2,6 +2,8 @@
  * @jest-environment jsdom
  */
 
+/* eslint-disable import/no-extraneous-dependencies -- ignore extraneous dependencies in test files. */
+
 // eslint-disable-next-line import/no-unassigned-import -- @testing-library/jest-dom doesn't need to be bound.
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
