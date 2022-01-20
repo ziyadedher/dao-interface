@@ -2,6 +2,12 @@
   "recommendations": [
     "arcanis.vscode-zipfs",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    "bradlc.vscode-tailwindcss",
+    "juanblanco.solidity",
+    "redhat.vscode-yaml",
+    "orta.vscode-jest"
   ]
 }

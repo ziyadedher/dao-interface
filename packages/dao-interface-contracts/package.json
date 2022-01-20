@@ -1,0 +1,5 @@
+{
+  "name": "@dao-interface/contracts",
+  "private": true,
+  "main": "./src/index.ts"
+}

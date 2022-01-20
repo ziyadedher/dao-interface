@@ -1651,11 +1651,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dao-interface/contracts@file:../dao-interface-contracts::locator=%40dao-interface%2Fwebapp%40workspace%3Apackages%2Fdao-interface-webapp":
+  version: 0.0.0
+  resolution: "@dao-interface/contracts@file:../dao-interface-contracts#../dao-interface-contracts::hash=967a1f&locator=%40dao-interface%2Fwebapp%40workspace%3Apackages%2Fdao-interface-webapp"
+  checksum: 29cc2640e3231880edaa76996467db3ec9baaf31d2e046d9b29900bdc3046967764dd0fd6a93ccccf2ef2a39b7e2c84bbf51d98627fe3cb1872f2e225194607c
+  languageName: node
+  linkType: hard
+
+"@dao-interface/contracts@workspace:packages/dao-interface-contracts":
+  version: 0.0.0-use.local
+  resolution: "@dao-interface/contracts@workspace:packages/dao-interface-contracts"
+  languageName: unknown
+  linkType: soft
+
 "@dao-interface/webapp@workspace:packages/dao-interface-webapp":
   version: 0.0.0-use.local
   resolution: "@dao-interface/webapp@workspace:packages/dao-interface-webapp"
   dependencies:
     "@babel/core": 7.16.7
+    "@dao-interface/contracts": ../dao-interface-contracts
     "@headlessui/react": 1.4.3
     "@jest/types": 27.4.2
     "@mdx-js/react": 1.6.22

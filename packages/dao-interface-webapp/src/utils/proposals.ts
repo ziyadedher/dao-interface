@@ -1,8 +1,7 @@
+import { Governor__factory as GovernorFactory } from "@dao-interface/contracts";
 import { useEthers } from "@usedapp/core";
 import { ethers } from "ethers";
 import { useEffect, useMemo, useState } from "react";
-
-import { Governor__factory } from "../types/typechain";
 
 import type { BigNumber } from "ethers";
 
@@ -25,7 +24,7 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
     () =>
       typeof provider === "undefined"
         ? null
-        : Governor__factory.connect(
+        : GovernorFactory.connect(
             ethers.utils.getAddress(contractAddress),
             provider
           ),
