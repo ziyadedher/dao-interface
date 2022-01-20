@@ -3,16 +3,16 @@ name: Jest and Codecov
 on: push
 
 jobs:
-  test-and-coverage:
+  webapp:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn install
+        run: yarn workspace @dao-interface/webapp install
       - name: Run Jest
-        run: yarn test
+        run: yarn workspace @dao-interface/webapp test
       - name: Run Codecov
-        run: yarn codecov
+        run: yarn workspace @dao-interface/webapp codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
