@@ -4,15 +4,15 @@
   "scripts": {
     "lint": "eslint 'src/**' 'tests/**' 'stories/**'",
     "test": "jest",
+    "test:watch": "jest --watch --notify",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:watch": "jest --watch --notify",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@dao-interface/contracts": "../dao-interface-contracts",
+    "@dao-interface/contracts": "workspace:^",
     "@headlessui/react": "1.4.3",
     "@usedapp/core": "^0.9.0",
     "ethers": "^5.5.3",

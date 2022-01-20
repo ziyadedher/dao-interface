@@ -20,6 +20,8 @@ const CONFIG: Config.InitialOptions = {
       isolatedModules: true,
     },
   },
+
+  transformIgnorePatterns: ["<rootDir>/node_modules/@dao-interface/contracts"],
 };
 
 export default CONFIG;
