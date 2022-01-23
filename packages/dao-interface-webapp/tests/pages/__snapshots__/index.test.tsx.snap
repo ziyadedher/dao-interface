@@ -6,22 +6,113 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="container flex flex-col justify-center items-center mx-auto max-w-5xl"
+        class="w-full min-h-screen bg-gray-50"
       >
         <div
-          class="flex flex-col gap-8 items-center m-8"
+          class="flex flex-col justify-center items-center mx-auto"
         >
-          <h1
-            class="text-4xl text-gray-800"
-          >
-            Proposals
-          </h1>
           <div
-            class="overflow-hidden rounded-md shadow-md"
+            class="flex flex-col gap-8 items-center p-8 w-full"
           >
-            <ul
-              class="flex flex-col divide-y divide-gray-200"
-            />
+            <h1
+              class="text-4xl text-gray-800"
+            >
+              Proposals
+            </h1>
+            <div
+              class="flex flex-row gap-8 w-full"
+            >
+              <div
+                class="flex flex-col flex-1 w-1/2"
+              />
+              <div
+                class="flex flex-col w-1/2"
+              >
+                <div
+                  class="w-full bg-gray-50"
+                >
+                  <div
+                    class="flex flex-col gap-4 justify-center items-center h-full text-gray-500"
+                  >
+                    <span>
+                      <svg
+                        fill="currentColor"
+                        height="64"
+                        viewBox="0 0 256 256"
+                        width="64"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          fill="none"
+                          height="256"
+                          width="256"
+                        />
+                        <path
+                          d="M35.3,103.1a96.4,96.4,0,0,1,24.8-43"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                        <path
+                          d="M60.1,195.9a95.7,95.7,0,0,1-24.8-43.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                        <path
+                          d="M152.9,220.7a94.2,94.2,0,0,1-49.7,0"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                        <path
+                          d="M220.7,152.9a96.4,96.4,0,0,1-24.8,43"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                        <path
+                          d="M195.9,60.1a95.7,95.7,0,0,1,24.8,43.1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                        <path
+                          d="M103.1,35.3a94.2,94.2,0,0,1,49.7,0"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        />
+                      </svg>
+                    </span>
+                    <div
+                      class="text-center"
+                    >
+                      <p
+                        class="font-bold"
+                      >
+                        Select a proposal to get started.
+                      </p>
+                      <p>
+                        Choose a proposal to browse from the selector.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -29,22 +120,113 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="container flex flex-col justify-center items-center mx-auto max-w-5xl"
+      class="w-full min-h-screen bg-gray-50"
     >
       <div
-        class="flex flex-col gap-8 items-center m-8"
+        class="flex flex-col justify-center items-center mx-auto"
       >
-        <h1
-          class="text-4xl text-gray-800"
-        >
-          Proposals
-        </h1>
         <div
-          class="overflow-hidden rounded-md shadow-md"
+          class="flex flex-col gap-8 items-center p-8 w-full"
         >
-          <ul
-            class="flex flex-col divide-y divide-gray-200"
-          />
+          <h1
+            class="text-4xl text-gray-800"
+          >
+            Proposals
+          </h1>
+          <div
+            class="flex flex-row gap-8 w-full"
+          >
+            <div
+              class="flex flex-col flex-1 w-1/2"
+            />
+            <div
+              class="flex flex-col w-1/2"
+            >
+              <div
+                class="w-full bg-gray-50"
+              >
+                <div
+                  class="flex flex-col gap-4 justify-center items-center h-full text-gray-500"
+                >
+                  <span>
+                    <svg
+                      fill="currentColor"
+                      height="64"
+                      viewBox="0 0 256 256"
+                      width="64"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        fill="none"
+                        height="256"
+                        width="256"
+                      />
+                      <path
+                        d="M35.3,103.1a96.4,96.4,0,0,1,24.8-43"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M60.1,195.9a95.7,95.7,0,0,1-24.8-43.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M152.9,220.7a94.2,94.2,0,0,1-49.7,0"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M220.7,152.9a96.4,96.4,0,0,1-24.8,43"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M195.9,60.1a95.7,95.7,0,0,1,24.8,43.1"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                      <path
+                        d="M103.1,35.3a94.2,94.2,0,0,1,49.7,0"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="16"
+                      />
+                    </svg>
+                  </span>
+                  <div
+                    class="text-center"
+                  >
+                    <p
+                      class="font-bold"
+                    >
+                      Select a proposal to get started.
+                    </p>
+                    <p>
+                      Choose a proposal to browse from the selector.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
