@@ -12,7 +12,7 @@ interface ProposalPaneProps {
 const ProposalPane: React.FunctionComponent<ProposalPaneProps> = ({
   proposal,
 }) => (
-  <div className="w-full h-screen bg-gray-50">
+  <div className="w-full bg-gray-50">
     {proposal === null ? (
       <ProposalPaneEmpty />
     ) : (

@@ -1,5 +1,5 @@
 import { CaretDoubleRight, PencilSimpleLine } from "phosphor-react";
-import React from "react";
+import React, { useCallback } from "react";
 
 import Badge from "../../components/badge";
 import { ProposalState } from "../../utils/proposals";
@@ -37,20 +37,25 @@ const getBadgeStyle = (proposal: Proposal): BadgeStyle => {
 
 interface ProposalListItemProps {
   readonly proposal: Proposal;
-  readonly onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  readonly onClick?: (proposal: Proposal) => void;
 }
 
 const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
   proposal,
-  onClick: handleClick,
+  onClick,
 }) => {
   const badgeStyle = getBadgeStyle(proposal);
+
+  const handleClick = useCallback(() => {
+    if (typeof onClick === "undefined") return;
+    onClick(proposal);
+  }, [proposal, onClick]);
 
   return (
     <button
       type="button"
       onClick={handleClick}
-      className="group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 hover:bg-gray-50"
+      className="group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 hover:bg-gray-100 hover:shadow-inner"
     >
       <div className="flex flex-row gap-4 items-center self-center text-gray-300 group-hover:text-gray-400">
         <span className="text-xs font-bold">{proposal.order}</span>
