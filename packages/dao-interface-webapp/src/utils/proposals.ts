@@ -22,6 +22,12 @@ enum ProposalState {
   EXPIRED = 6,
   EXECUTED = 7,
 }
+
+interface ProposalVotes {
+  readonly againstVotes: BigNumber;
+  readonly forVotes: BigNumber;
+  readonly abstainVotes: BigNumber;
+}
 interface Proposal {
   readonly block: number;
   readonly transactionHash: string;
@@ -31,11 +37,7 @@ interface Proposal {
   readonly name: string;
   readonly description: string;
   readonly state: ProposalState;
-  readonly votes: {
-    readonly againstVotes: BigNumber;
-    readonly forVotes: BigNumber;
-    readonly abstainVotes: BigNumber;
-  };
+  readonly votes: ProposalVotes;
 }
 
 const useProposals = (contractAddress: string): Proposal[] | null => {
@@ -103,4 +105,5 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
 };
 
 export type { Proposal };
+export type { ProposalVotes };
 export { useProposals, ProposalState, ProposalVote };
