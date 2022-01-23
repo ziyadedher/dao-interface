@@ -6,34 +6,46 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="container flex flex-row justify-center items-center mx-auto h-screen"
+        class="container flex flex-col justify-center items-center mx-auto max-w-5xl"
       >
         <div
-          class="text-center"
+          class="flex flex-col gap-8 items-center m-8"
         >
           <h1
-            class="mb-8 text-3xl"
+            class="text-4xl text-gray-800"
           >
-            Yes, and?
+            Proposals
           </h1>
-          <div />
+          <div
+            class="overflow-hidden rounded-md shadow-md"
+          >
+            <ul
+              class="flex flex-col divide-y divide-gray-200"
+            />
+          </div>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="container flex flex-row justify-center items-center mx-auto h-screen"
+      class="container flex flex-col justify-center items-center mx-auto max-w-5xl"
     >
       <div
-        class="text-center"
+        class="flex flex-col gap-8 items-center m-8"
       >
         <h1
-          class="mb-8 text-3xl"
+          class="text-4xl text-gray-800"
         >
-          Yes, and?
+          Proposals
         </h1>
-        <div />
+        <div
+          class="overflow-hidden rounded-md shadow-md"
+        >
+          <ul
+            class="flex flex-col divide-y divide-gray-200"
+          />
+        </div>
       </div>
     </div>
   </div>,
