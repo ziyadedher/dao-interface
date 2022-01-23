@@ -81,7 +81,9 @@ interface ProposalListStoryProps {
 
 const ProposalListStory: Story<ProposalListStoryProps> = ({
   proposals,
-}: ProposalListStoryProps) => <ProposalList proposals={proposals} />;
+}: ProposalListStoryProps) => (
+  <ProposalList proposals={proposals} selectedProposal={null} />
+);
 
 ProposalListStory.storyName = "Proposal List";
 ProposalListStory.args = {

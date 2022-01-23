@@ -27,6 +27,7 @@ const Index: NextPage = () => {
               {proposals !== null && (
                 <ProposalList
                   proposals={proposals}
+                  selectedProposal={selectedProposal}
                   onProposalClick={handleProposalClick}
                 />
               )}
