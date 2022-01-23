@@ -5,7 +5,7 @@ import type Color from "../../src/components/color";
 import type { Meta, Story } from "@storybook/react";
 
 const META: Meta = {
-  title: "Components/Progress Bar",
+  title: "Components/Badge",
   component: Badge,
 };
 
