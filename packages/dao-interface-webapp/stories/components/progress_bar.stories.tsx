@@ -1,8 +1,7 @@
-import ProgressBar, {
-  ProgressBarColors,
-} from "../../src/components/progress_bar";
+import { Colors } from "../../src/components/color";
+import ProgressBar from "../../src/components/progress_bar";
 
-import type { ProgressBarColor } from "../../src/components/progress_bar";
+import type Color from "../../src/components/color";
 import type { Meta, Story } from "@storybook/react";
 
 const META: Meta = {
@@ -11,7 +10,7 @@ const META: Meta = {
 };
 
 interface ProgressBarStoryProps {
-  readonly color: ProgressBarColor;
+  readonly color: Color;
   readonly percentFilled: number;
 }
 
@@ -28,7 +27,7 @@ ProgressBarStory.args = {
 };
 ProgressBarStory.argTypes = {
   color: {
-    options: ProgressBarColors,
+    options: Colors,
     control: { type: "select" },
   },
   percentFilled: {

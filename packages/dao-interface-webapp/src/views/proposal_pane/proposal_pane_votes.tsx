@@ -3,12 +3,12 @@ import React from "react";
 import ProgressBar from "../../components/progress_bar";
 import { ProposalVote } from "../../utils/proposals";
 
-import type { ProgressBarColor } from "../../components/progress_bar";
+import type Color from "../../components/color";
 import type { ProposalVotes } from "../../utils/proposals";
 
 interface ProposalVoteMetadata {
   readonly voteName: string;
-  readonly color: ProgressBarColor;
+  readonly color: Color;
 }
 
 const getProposalVoteName = (

@@ -1,11 +1,9 @@
 import classNames from "classnames";
 import React from "react";
 
-const ProgressBarColors = ["green", "red", "gray"] as const;
+import type Color from "./color";
 
-type ProgressBarColor = typeof ProgressBarColors[number];
-
-const getProgressBarColorClass = (color: ProgressBarColor): string => {
+const getProgressBarColorClass = (color: Color): string => {
   switch (color) {
     case "green":
       return "bg-green-500";
@@ -22,7 +20,7 @@ const getProgressBarPercentFilledWidth = (percentFilled: number): string =>
   `${percentFilled * 100}%`;
 
 interface ProgressBarProps {
-  readonly color: ProgressBarColor;
+  readonly color: Color;
   readonly percentFilled: number;
 }
 
@@ -38,6 +36,4 @@ const ProgressBar: React.FunctionComponent<ProgressBarProps> = ({
   </div>
 );
 
-export type { ProgressBarColor };
-export { ProgressBarColors };
 export default ProgressBar;
