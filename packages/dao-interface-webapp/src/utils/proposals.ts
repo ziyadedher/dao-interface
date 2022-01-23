@@ -5,14 +5,36 @@ import { useEffect, useMemo, useState } from "react";
 
 import type { BigNumber } from "ethers";
 
+enum ProposalVote {
+  AGAINST = 0,
+  FOR = 1,
+  ABSTAIN = 2,
+}
+
+enum ProposalState {
+  UNDETERMINED = -1,
+  PENDING = 0,
+  ACTIVE = 1,
+  CANCELLED = 2,
+  DEFEATED = 3,
+  SUCCEEDED = 4,
+  QUEUED = 5,
+  EXPIRED = 6,
+  EXECUTED = 7,
+}
 interface Proposal {
   readonly block: number;
+  readonly transactionHash: string;
   readonly id: BigNumber;
-  readonly state: number;
+  readonly order: number;
+  readonly proposer: string;
+  readonly name: string;
+  readonly description: string;
+  readonly state: ProposalState;
   readonly votes: {
-    againstVotes: BigNumber;
-    forVotes: BigNumber;
-    abstainVotes: BigNumber;
+    readonly againstVotes: BigNumber;
+    readonly forVotes: BigNumber;
+    readonly abstainVotes: BigNumber;
   };
 }
 
@@ -42,19 +64,32 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
       );
 
       const newProposals = await Promise.all(
-        proposalCreatedEvents.map(
-          async (proposalCreatedEvent): Promise<Proposal> => {
+        proposalCreatedEvents
+          // Sort in ascending order based on block number.
+          .sort((a, b) => a.blockNumber - b.blockNumber)
+          .map(async (proposalCreatedEvent, i): Promise<Proposal> => {
             const {
-              args: { proposalId },
+              blockNumber,
+              transactionHash,
+              args: { proposalId, description, proposer },
             } = proposalCreatedEvent;
+            const [proposalName] = description.split("\n");
+            if (typeof proposalName === "undefined") {
+              throw new Error("Proposal description is invalid.");
+            }
+
             return {
-              block: proposalCreatedEvent.blockNumber,
+              block: blockNumber,
+              transactionHash,
               id: proposalId,
+              order: i,
+              proposer,
+              name: proposalName,
+              description,
               state: await contract.state(proposalId),
               votes: await contract.proposalVotes(proposalId),
             };
-          }
-        )
+          })
       );
 
       setProposals(newProposals);
@@ -68,4 +103,4 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
 };
 
 export type { Proposal };
-export { useProposals };
+export { useProposals, ProposalState, ProposalVote };
