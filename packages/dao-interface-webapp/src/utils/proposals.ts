@@ -40,13 +40,15 @@ interface Proposal {
   readonly votes: ProposalVotes;
 }
 
-const useProposals = (contractAddress: string): Proposal[] | null => {
+const useProposals = (
+  contractAddress: string | undefined
+): Proposal[] | null => {
   const { library: provider } = useEthers();
   const [proposals, setProposals] = useState<Proposal[] | null>(null);
 
   const contract = useMemo(
     () =>
-      typeof provider === "undefined"
+      typeof provider === "undefined" || typeof contractAddress === "undefined"
         ? null
         : GovernorFactory.connect(
             ethers.utils.getAddress(contractAddress),

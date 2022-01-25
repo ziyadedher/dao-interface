@@ -77,10 +77,10 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
         <PencilSimpleLine size={16} weight="bold" />
       </div>
       <div className="flex flex-col flex-1">
-        <h3 className="overflow-hidden max-w-sm text-sm font-medium text-ellipsis whitespace-nowrap">
+        <h3 className="overflow-hidden w-3/4 text-sm font-medium text-ellipsis">
           {proposal.name}
         </h3>
-        <p className="overflow-hidden max-w-xs text-xs text-gray-400 text-ellipsis">
+        <p className="overflow-hidden w-1/2 text-xs text-gray-400 text-ellipsis">
           {proposal.id.toHexString()}
         </p>
       </div>
