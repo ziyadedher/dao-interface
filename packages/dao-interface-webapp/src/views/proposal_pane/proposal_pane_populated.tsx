@@ -26,7 +26,7 @@ const ProposalPanePopulated: React.FunctionComponent<
       <button
         type="button"
         onClick={handleClosePress}
-        className="inline-flex absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-all"
+        className="inline-flex absolute top-8 right-8 text-gray-400 hover:text-gray-700 transition-all"
       >
         <X size={16} weight="bold" />
       </button>
