@@ -59,7 +59,7 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
       type="button"
       onClick={handleClick}
       className={classNames(
-        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800",
+        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 transition-all",
         isSelected
           ? "bg-gray-100 shadow-inner"
           : "hover:bg-gray-100 hover:shadow-inner"
@@ -67,7 +67,7 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
     >
       <div
         className={classNames(
-          "flex flex-row gap-4 items-center self-center",
+          "flex flex-row gap-4 items-center self-center transition-all",
           isSelected
             ? "text-gray-400"
             : "text-gray-300 group-hover:text-gray-400"
@@ -86,8 +86,9 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
         </Badge>
         <span
           className={classNames(
+            "transition-all rotate-180 duration-300",
             isSelected
-              ? "text-gray-400"
+              ? "text-gray-400 rotate-0"
               : "text-gray-300 group-hover:text-gray-400"
           )}
         >

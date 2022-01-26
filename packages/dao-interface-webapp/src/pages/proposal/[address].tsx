@@ -20,7 +20,9 @@ const ProposalPage: NextPage = () => {
   const proposals = useProposals(address as string | undefined);
 
   const handleProposalClick = useCallback((proposal: Proposal) => {
-    setSelectedProposal(proposal);
+    setSelectedProposal((currentProposal) =>
+      currentProposal === proposal ? null : proposal
+    );
   }, []);
 
   return (
