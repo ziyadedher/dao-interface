@@ -38,7 +38,7 @@ const ProposalPaneVotesCard: React.FunctionComponent<
   const { voteName, color } = getProposalVoteName(vote);
 
   return (
-    <div className="flex overflow-hidden flex-col gap-4 p-4 w-64 rounded-md border border-gray-300">
+    <div className="flex overflow-hidden flex-col gap-4 p-4 w-48 rounded-md border border-gray-300">
       <div className="flex flex-row justify-between text-sm">
         <h4 className="font-bold">{voteName}</h4>
         <p className="text-sm">
@@ -60,7 +60,7 @@ const ProposalPaneVotes: React.FunctionComponent<
   const { forVotes, againstVotes, abstainVotes } = votes;
   const totalVotes = forVotes.add(againstVotes).add(abstainVotes);
   return (
-    <div className="flex flex-col gap-4 w-full sm:flex-row sm:gap-8">
+    <div className="flex flex-row flex-wrap gap-4 w-full">
       <ProposalPaneVotesCard
         vote={ProposalVote.FOR}
         numVotes={forVotes.toNumber()}

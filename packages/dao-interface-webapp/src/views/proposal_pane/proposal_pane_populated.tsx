@@ -38,9 +38,7 @@ const ProposalPanePopulated: React.FunctionComponent<
         </p>
         <h2 className="text-2xl font-bold">{proposal.name}</h2>
       </div>
-      <div className="flex flex-col gap-4">
-        <ProposalPaneVotes votes={proposal.votes} />
-      </div>
+      <ProposalPaneVotes votes={proposal.votes} />
       <div className="flex flex-col">
         <h3 className="text-lg font-bold">Description</h3>
         <p>{proposal.description}</p>
