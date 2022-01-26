@@ -3,6 +3,7 @@ import { useEthers } from "@usedapp/core";
 import { ethers } from "ethers";
 import { useEffect, useMemo, useState } from "react";
 
+import type { Governor } from "@dao-interface/contracts";
 import type { BigNumber } from "ethers";
 
 enum ProposalVote {
@@ -40,20 +41,44 @@ interface Proposal {
   readonly votes: ProposalVotes;
 }
 
-const useProposals = (contractAddress: string): Proposal[] | null => {
-  const { library: provider } = useEthers();
-  const [proposals, setProposals] = useState<Proposal[] | null>(null);
+type ProposalReturnState =
+  | "invalid-address"
+  | "loading"
+  | "not-contract"
+  | "not-governor"
+  | "unknown-error";
 
-  const contract = useMemo(
-    () =>
-      typeof provider === "undefined"
-        ? null
-        : GovernorFactory.connect(
-            ethers.utils.getAddress(contractAddress),
-            provider
-          ),
-    [contractAddress, provider]
-  );
+type ProposalReturn =
+  | { readonly state: "ready"; readonly proposals: Proposal[] }
+  | { readonly state: ProposalReturnState };
+
+const useProposals = (contractAddress: string | undefined): ProposalReturn => {
+  const { library: provider } = useEthers();
+  const [proposals, setProposals] = useState<ProposalReturn>({
+    state: "loading",
+  });
+
+  const contract = useMemo(() => {
+    if (
+      typeof provider === "undefined" ||
+      typeof contractAddress === "undefined"
+    ) {
+      setProposals({ state: "loading" });
+      return null;
+    }
+
+    if (!ethers.utils.isAddress(contractAddress)) {
+      setProposals({ state: "invalid-address" });
+      return null;
+    }
+
+    const newContract = GovernorFactory.connect(
+      ethers.utils.getAddress(contractAddress),
+      provider
+    );
+
+    return newContract;
+  }, [contractAddress, provider]);
 
   useEffect(() => {
     if (contract === null) return;
@@ -80,6 +105,9 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
               throw new Error("Proposal description is invalid.");
             }
 
+            const state = await contract.state(proposalId);
+            const votes = await contract.proposalVotes(proposalId);
+
             return {
               block: blockNumber,
               transactionHash,
@@ -88,13 +116,13 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
               proposer,
               name: proposalName,
               description,
-              state: await contract.state(proposalId),
-              votes: await contract.proposalVotes(proposalId),
+              state,
+              votes,
             };
           })
       );
 
-      setProposals(newProposals);
+      setProposals({ state: "ready", proposals: newProposals });
     };
 
     // eslint-disable-next-line @typescript-eslint/no-floating-promises -- nope.
@@ -104,6 +132,5 @@ const useProposals = (contractAddress: string): Proposal[] | null => {
   return proposals;
 };
 
-export type { Proposal };
-export type { ProposalVotes };
+export type { Proposal, ProposalVotes, ProposalReturn };
 export { useProposals, ProposalState, ProposalVote };

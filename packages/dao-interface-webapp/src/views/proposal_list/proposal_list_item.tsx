@@ -59,30 +59,24 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
       type="button"
       onClick={handleClick}
       className={classNames(
-        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800",
-        isSelected
-          ? "bg-gray-100 shadow-inner"
-          : "hover:bg-gray-100 hover:shadow-inner"
+        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 transition-all hover:shadow-inner",
+        isSelected ? "bg-gray-100" : "hover:bg-gray-100"
       )}
     >
       <div
         className={classNames(
-          "flex flex-row gap-4 items-center self-center",
+          "flex flex-row gap-4 items-center self-center transition-all",
           isSelected
             ? "text-gray-400"
             : "text-gray-300 group-hover:text-gray-400"
         )}
       >
-        <span className="text-xs font-bold">{proposal.order}</span>
+        <span className="w-4 text-xs font-bold">{proposal.order}</span>
         <PencilSimpleLine size={16} weight="bold" />
       </div>
-      <div className="flex flex-col flex-1">
-        <h3 className="overflow-hidden max-w-sm text-sm font-medium text-ellipsis whitespace-nowrap">
-          {proposal.name}
-        </h3>
-        <p className="overflow-hidden max-w-xs text-xs text-gray-400 text-ellipsis">
-          {proposal.id.toHexString()}
-        </p>
+      <div className="flex overflow-hidden flex-col flex-1 min-w-0 whitespace-nowrap">
+        <h3 className="text-sm font-medium">{proposal.name}</h3>
+        <p className="text-xs text-gray-400">{proposal.id.toHexString()}</p>
       </div>
       <div className="flex flex-row gap-4 items-center self-center">
         <Badge color={badgeStyle.color} hasDot>
@@ -90,8 +84,9 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
         </Badge>
         <span
           className={classNames(
+            "transition-all rotate-180 duration-300",
             isSelected
-              ? "text-gray-400"
+              ? "text-gray-400 rotate-0"
               : "text-gray-300 group-hover:text-gray-400"
           )}
         >
