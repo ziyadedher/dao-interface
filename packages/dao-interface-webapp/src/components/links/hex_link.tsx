@@ -9,16 +9,16 @@ import type { HexType } from "../../utils/hex";
 interface HexLinkProps {
   readonly type: HexType;
   readonly hex: string;
-  readonly maxLength?: number;
+  readonly maxLength?: number | null;
 }
 
 const HexLink: React.FunctionComponent<HexLinkProps> = ({
   type,
   hex,
-  maxLength = 4,
+  maxLength = null,
 }) => (
   <TextLink href={getEtherscanLink(hex, type)} isExternal>
-    {hex.slice(0, maxLength + 2)}
+    {maxLength === null ? hex : hex.slice(0, maxLength + 2)}
   </TextLink>
 );
 
