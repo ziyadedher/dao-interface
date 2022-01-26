@@ -76,13 +76,16 @@ const FAKE_PROPOSAL_3: Proposal = {
 };
 
 interface ProposalListStoryProps {
-  readonly proposals: readonly Proposal[];
+  readonly proposals: Proposal[];
 }
 
 const ProposalListStory: Story<ProposalListStoryProps> = ({
   proposals,
 }: ProposalListStoryProps) => (
-  <ProposalList proposals={proposals} selectedProposal={null} />
+  <ProposalList
+    proposals={{ state: "ready", proposals }}
+    selectedProposal={null}
+  />
 );
 
 ProposalListStory.storyName = "Proposal List";
