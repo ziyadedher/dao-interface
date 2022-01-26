@@ -25,13 +25,17 @@ const ProposalPage: NextPage = () => {
     );
   }, []);
 
+  const handleProposalPaneClose = useCallback(() => {
+    setSelectedProposal(null);
+  }, []);
+
   return (
     <div className="flex overflow-hidden flex-col gap-8 p-8 pb-0 w-full h-screen bg-gray-50">
       <div className="flex flex-col items-center w-full">
         <h1 className="text-4xl text-gray-800">Proposals</h1>
       </div>
 
-      <div className="flex flex-row flex-1 w-full min-h-0 divide-x divide-gray-200">
+      <div className="flex flex-row flex-1 w-full min-h-0 border-t border-gray-200 divide-x divide-gray-200">
         <div className="flex overflow-y-auto flex-col w-1/2">
           <ProposalList
             proposals={proposals}
@@ -40,7 +44,10 @@ const ProposalPage: NextPage = () => {
           />
         </div>
         <div className="flex overflow-y-auto flex-col w-1/2 h-full">
-          <ProposalPane proposal={selectedProposal} />
+          <ProposalPane
+            proposal={selectedProposal}
+            onClose={handleProposalPaneClose}
+          />
         </div>
       </div>
     </div>

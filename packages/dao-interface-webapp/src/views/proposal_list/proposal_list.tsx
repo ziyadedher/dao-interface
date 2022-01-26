@@ -17,16 +17,18 @@ const ProposalList: React.FunctionComponent<ProposalListProps> = ({
 }) => (
   <div className="flex flex-col divide-y divide-gray-200">
     {proposals.state === "ready"
-      ? proposals.proposals.map((proposal) => (
-          <ProposalListItem
-            key={proposal.id.toHexString()}
-            proposal={proposal}
-            isSelected={
-              selectedProposal !== null && proposal.id === selectedProposal.id
-            }
-            onClick={handleProposalClick}
-          />
-        ))
+      ? proposals.proposals
+          .sort((a, b) => b.order - a.order)
+          .map((proposal) => (
+            <ProposalListItem
+              key={proposal.id.toHexString()}
+              proposal={proposal}
+              isSelected={
+                selectedProposal !== null && proposal.id === selectedProposal.id
+              }
+              onClick={handleProposalClick}
+            />
+          ))
       : null}
   </div>
 );

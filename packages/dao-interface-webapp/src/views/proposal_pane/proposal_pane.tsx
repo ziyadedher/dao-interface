@@ -7,15 +7,17 @@ import type { Proposal } from "../../utils/proposals";
 
 interface ProposalPaneProps {
   readonly proposal: Proposal | null;
+  readonly onClose?: () => void;
 }
 
 const ProposalPane: React.FunctionComponent<ProposalPaneProps> = ({
   proposal,
+  onClose: handleClose,
 }) =>
   proposal === null ? (
     <ProposalPaneEmpty />
   ) : (
-    <ProposalPanePopulated proposal={proposal} />
+    <ProposalPanePopulated proposal={proposal} onClose={handleClose} />
   );
 
 export default ProposalPane;
