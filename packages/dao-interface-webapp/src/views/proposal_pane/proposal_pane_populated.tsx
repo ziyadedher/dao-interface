@@ -1,5 +1,7 @@
 import React from "react";
 
+import HexLink from "../../components/links/hex_link";
+
 import ProposalPaneVotes from "./proposal_pane_votes";
 
 import type { Proposal } from "../../utils/proposals";
@@ -28,7 +30,9 @@ const ProposalPanePopulated: React.FunctionComponent<
     <div className="flex flex-col">
       <h3 className="text-lg font-bold">Details</h3>
       <p className="">
-        Proposed by {proposal.proposer} at {proposal.transactionHash}.
+        Proposed by{" "}
+        <HexLink type="address" hex={proposal.proposer} maxLength={4} /> at{" "}
+        <HexLink type="tx" hex={proposal.transactionHash} maxLength={8} />.
       </p>
     </div>
   </div>
