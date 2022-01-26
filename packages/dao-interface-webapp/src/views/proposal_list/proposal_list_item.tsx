@@ -73,16 +73,12 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
             : "text-gray-300 group-hover:text-gray-400"
         )}
       >
-        <span className="text-xs font-bold">{proposal.order}</span>
+        <span className="w-4 text-xs font-bold">{proposal.order}</span>
         <PencilSimpleLine size={16} weight="bold" />
       </div>
-      <div className="flex flex-col flex-1">
-        <h3 className="overflow-hidden w-3/4 text-sm font-medium text-ellipsis">
-          {proposal.name}
-        </h3>
-        <p className="overflow-hidden w-1/2 text-xs text-gray-400 text-ellipsis">
-          {proposal.id.toHexString()}
-        </p>
+      <div className="flex overflow-hidden flex-col flex-1 min-w-0 whitespace-nowrap">
+        <h3 className="text-sm font-medium">{proposal.name}</h3>
+        <p className="text-xs text-gray-400">{proposal.id.toHexString()}</p>
       </div>
       <div className="flex flex-row gap-4 items-center self-center">
         <Badge color={badgeStyle.color} hasDot>

@@ -42,7 +42,7 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({
         value={query}
         onChange={handleChange}
         onKeyPress={handleKeyPress}
-        className="py-2 px-4 pl-8 w-full text-xs text-gray-700 rounded-md border border-gray-200 focus:border-blue-400 outline-none shadow-sm transition-all"
+        className="py-2 px-4 pl-8 w-full text-base text-gray-700 rounded-md border border-gray-200 focus:border-blue-400 outline-none shadow-sm transition-all"
       />
     </div>
   );

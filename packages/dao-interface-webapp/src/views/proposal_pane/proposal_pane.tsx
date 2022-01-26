@@ -11,14 +11,11 @@ interface ProposalPaneProps {
 
 const ProposalPane: React.FunctionComponent<ProposalPaneProps> = ({
   proposal,
-}) => (
-  <div className="w-full bg-gray-50">
-    {proposal === null ? (
-      <ProposalPaneEmpty />
-    ) : (
-      <ProposalPanePopulated proposal={proposal} />
-    )}
-  </div>
-);
+}) =>
+  proposal === null ? (
+    <ProposalPaneEmpty />
+  ) : (
+    <ProposalPanePopulated proposal={proposal} />
+  );
 
 export default ProposalPane;
