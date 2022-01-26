@@ -40,7 +40,7 @@ const ProposalPage: NextPage = () => {
       </div>
 
       <div className="flex flex-row flex-1 w-full min-h-0 border-t border-gray-200 divide-x divide-gray-200">
-        <div className="flex overflow-y-auto flex-col w-1/2">
+        <div className="flex flex-col w-1/2 h-full">
           <ProposalList
             proposals={proposals}
             selectedProposal={selectedProposal}
