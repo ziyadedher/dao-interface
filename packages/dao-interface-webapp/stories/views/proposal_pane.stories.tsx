@@ -30,6 +30,9 @@ const FAKE_PROPOSAL: Proposal = {
 const ProposalPaneStoryEmpty: Story = () => <ProposalPane proposal={null} />;
 ProposalPaneStoryEmpty.storyName = "Proposal Pane (empty)";
 
+const ProposalPaneStoryNew: Story = () => <ProposalPane proposal="new" />;
+ProposalPaneStoryNew.storyName = "Proposal Pane (new)";
+
 interface ProposalPaneStoryPopulatedProps {
   proposal: Proposal;
 }
@@ -44,4 +47,4 @@ ProposalPaneStoryPopulated.args = {
 };
 
 export default META;
-export { ProposalPaneStoryEmpty, ProposalPaneStoryPopulated };
+export { ProposalPaneStoryEmpty, ProposalPaneStoryNew, ProposalPaneStoryPopulated };

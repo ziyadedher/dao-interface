@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useRouter } from "next/router";
 import React, { useCallback, useState } from "react";
 
@@ -15,10 +16,14 @@ const ProposalPage: NextPage = () => {
     query: { address },
   } = router;
 
-  const [selectedProposal, setSelectedProposal] = useState<Proposal | null>(
-    null
-  );
+  const [selectedProposal, setSelectedProposal] = useState<
+    Proposal | "new" | null
+  >(null);
   const proposals = useProposals(address as string | undefined);
+
+  const handleNewProposalClick = useCallback(() => {
+    setSelectedProposal("new");
+  }, []);
 
   const handleProposalClick = useCallback((proposal: Proposal) => {
     setSelectedProposal((currentProposal) =>
@@ -31,7 +36,7 @@ const ProposalPage: NextPage = () => {
   }, []);
 
   return (
-    <div className="flex overflow-hidden flex-col gap-8 p-8 pb-0 w-full h-screen bg-gray-50">
+    <div className="flex overflow-hidden flex-col gap-8 p-8 pb-0 w-full h-screen bg-gray-50 md:p-0 md:pt-8">
       <div className="flex flex-col gap-4 items-center w-full">
         <h1 className="text-4xl text-gray-800">Proposals</h1>
         <h2 className="text-sm text-gray-700">
@@ -40,14 +45,33 @@ const ProposalPage: NextPage = () => {
       </div>
 
       <div className="flex flex-row flex-1 w-full min-h-0 border-t border-gray-200 divide-x divide-gray-200">
-        <div className="flex flex-col w-1/2 h-full">
+        <div
+          className={classNames(
+            "flex flex-col h-full transition-all",
+            selectedProposal === null
+              ? "w-2/3"
+              : selectedProposal === "new"
+              ? "w-1/4"
+              : "w-1/3"
+          )}
+        >
           <ProposalList
             proposals={proposals}
             selectedProposal={selectedProposal}
+            onNewProposalClick={handleNewProposalClick}
             onProposalClick={handleProposalClick}
           />
         </div>
-        <div className="flex overflow-y-auto flex-col w-1/2 h-full">
+        <div
+          className={classNames(
+            "flex overflow-y-auto flex-col h-full transition-all",
+            selectedProposal === null
+              ? "w-1/3"
+              : selectedProposal === "new"
+              ? "w-3/4"
+              : "w-2/3"
+          )}
+        >
           <ProposalPane
             proposal={selectedProposal}
             onClose={handleProposalPaneClose}

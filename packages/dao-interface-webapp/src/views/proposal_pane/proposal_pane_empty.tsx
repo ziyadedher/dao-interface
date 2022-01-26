@@ -2,7 +2,7 @@ import { CircleDashed } from "phosphor-react";
 import React from "react";
 
 const ProposalPaneEmpty: React.FunctionComponent = () => (
-  <div className="flex flex-col gap-4 justify-center items-center h-full text-gray-500">
+  <div className="flex flex-col gap-4 justify-center items-center p-4 h-full text-gray-500">
     <span>
       <CircleDashed size={64} />
     </span>

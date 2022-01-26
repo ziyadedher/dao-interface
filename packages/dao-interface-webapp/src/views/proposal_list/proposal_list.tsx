@@ -7,7 +7,7 @@ import type { Proposal, ProposalReturn } from "../../utils/proposals";
 
 interface ProposalListProps {
   readonly proposals: ProposalReturn;
-  readonly selectedProposal: Proposal | null;
+  readonly selectedProposal: Proposal | "new" | null;
   readonly onNewProposalClick?: () => void;
   readonly onProposalClick?: (proposal: Proposal) => void;
 }
@@ -19,7 +19,10 @@ const ProposalList: React.FunctionComponent<ProposalListProps> = ({
   onProposalClick: handleProposalClick,
 }) => (
   <div className="flex flex-col h-full">
-    <ProposalListNewProposalItem onClick={handleNewProposalClick} />
+    <ProposalListNewProposalItem
+      onClick={handleNewProposalClick}
+      isSelected={selectedProposal === "new"}
+    />
     <div className="flex overflow-y-auto flex-col divide-y divide-gray-200">
       {proposals.state === "ready"
         ? proposals.proposals
@@ -30,6 +33,7 @@ const ProposalList: React.FunctionComponent<ProposalListProps> = ({
                 proposal={proposal}
                 isSelected={
                   selectedProposal !== null &&
+                  selectedProposal !== "new" &&
                   proposal.id === selectedProposal.id
                 }
                 onClick={handleProposalClick}

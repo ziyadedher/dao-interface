@@ -59,10 +59,8 @@ const ProposalListItem: React.FunctionComponent<ProposalListItemProps> = ({
       type="button"
       onClick={handleClick}
       className={classNames(
-        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 transition-all",
-        isSelected
-          ? "bg-gray-100 shadow-inner"
-          : "hover:bg-gray-100 hover:shadow-inner"
+        "group flex flex-row gap-4 py-2 px-4 w-full text-left text-gray-800 transition-all hover:shadow-inner",
+        isSelected ? "bg-gray-100" : "hover:bg-gray-100"
       )}
     >
       <div
